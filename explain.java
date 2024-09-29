@@ -1,24 +1,3 @@
-class Main {
-    public static void main(String[] args) {
-        Circle circle = new Circle();
-        Square square = new Square();
-
-        circle.draw(); // 抽象化とポリモーフィズム
-        square.draw(); // 抽象化とポリモーフィズム
-
-        BankAccount account = new BankAccount();
-        account.deposit(1000);
-        System.out.println("Account balance: " + account.getBalance()); // カプセル化
-
-        Animal dog = new Dog();
-        Animal cat = new Cat();
-
-        Zoo zoo = new Zoo();
-        zoo.performSound(dog); // ポリモーフィズム
-        zoo.performSound(cat); // ポリモーフィズム
-    }
-}
-
 // 抽象化の例
 abstract class Shape {
     abstract void draw();
@@ -77,4 +56,23 @@ class Zoo {
     }
 }
 
+class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+        Square square = new Square();
 
+        circle.draw(); // 抽象化とポリモーフィズム
+        square.draw(); // 抽象化とポリモーフィズム
+
+        BankAccount account = new BankAccount();
+        account.deposit(1000);
+        System.out.println("Account balance: " + account.getBalance()); // カプセル化
+
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+
+        Zoo zoo = new Zoo();
+        zoo.performSound(dog); // ポリモーフィズム
+        zoo.performSound(cat); // ポリモーフィズム
+    }
+}
